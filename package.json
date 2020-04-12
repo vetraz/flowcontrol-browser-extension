@@ -1,0 +1,55 @@
+{
+  "name": "flowcontrol-browser-extension",
+  "version": "0.1.0",
+  "description": "Shows wc state based on data from floWControl server.",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "babel-loader": "^8.0.6",
+    "compression-webpack-plugin": "^3.0.0",
+    "css-loader": "^3.2.0",
+    "file-loader": "^4.1.0",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "less": "^3.9.0",
+    "less-loader": "^5.0.0",
+    "mini-css-extract-plugin": "^0.8.0",
+    "rimraf": "^2.6.3",
+    "standard": "^13.1.0",
+    "style-loader": "^1.0.0",
+    "url-loader": "^2.1.0",
+    "webpack": "^4.39.1",
+    "webpack-cli": "^3.3.6"
+  },
+  "scripts": {
+    "prebuild": "rimraf ./extension/dist/",
+    "start": "webpack --config webpack.config.js -w -d",
+    "build": "webpack --config webpack.production.config.js -p",
+    "test": "standard"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vetraz/flowcontrol-browser-extension"
+  },
+  "keywords": [
+    "extension",
+    "chrome-extension",
+    "firefox-addon",
+    "flowcontrol"
+  ],
+  "bugs": {
+    "url": "https://github.com/vetraz/flowcontrol-browser-extension/issues"
+  },
+  "homepage": "https://github.com/vetraz/flowcontrol-browser-extension",
+  "standard": {
+    "globals": [
+      "browser",
+      "window"
+    ],
+    "ignore": [
+      "extension/dist/",
+      "node_modules/"
+    ]
+  }
+}
