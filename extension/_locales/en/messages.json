@@ -1,0 +1,10 @@
+{
+  "extName": {
+    "message": "floWControl",
+    "description": "Extension name"
+  },
+  "extDesc": {
+    "message": "Extension to display wc statuses",
+    "description": "Extension description"
+  }
+}
